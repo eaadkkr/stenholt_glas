@@ -1,0 +1,1614 @@
+/* Basic reset */
+:after:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+/*-------------------------------------------------------------------------
+FARVER - hentes med: var(--navn)
+-------------------------------------------------------------------------*/
+:root {
+    --hvid: #F2F2F2;
+    --sort: #333333;
+    --orange: #EF7420;
+    --gra: #B3B3B3;
+}
+
+
+/*=============================================================================================
+==========================================   MOBIL   ==========================================
+=============================================================================================*/
+
+/*-------------------------------------------------------------------------
+HTML
+-------------------------------------------------------------------------*/
+html {
+    min-height: 100%;
+    background-color: var(--hvid);
+}
+
+
+/*-------------------------------------------------------------------------
+BODY
+-------------------------------------------------------------------------*/
+body {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--sort);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--sort);
+}
+
+
+/*-------------------------------------------------------------------------
+HEADER
+-------------------------------------------------------------------------*/
+
+.menu_og_sprog {
+    display: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5rem;
+    margin-bottom: 10px;
+}
+
+
+/*----- LOGO -----*/
+
+.logo {
+    height: 4.8rem;
+    padding-top: 0.2rem;
+    padding-left: 5%;
+}
+
+
+/*----- BURGERMENU https://codepen.io/AlHakem/pen/pKoEYp -----*/
+
+#burgermenu_streger {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    margin-right: 5%;
+    margin-top: 1.8rem;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+}
+
+#burgermenu_streger span,
+#burgermenu_streger span:before,
+#burgermenu_streger span:after {
+    background: var(--sort);
+    display: block;
+    height: 3px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+#burgermenu_streger span:before,
+#burgermenu_streger span:after {
+    content: "";
+}
+
+#burgermenu_streger span {
+    top: 13px;
+    width: 40px;
+}
+
+#burgermenu_streger span:before {
+    top: -12px;
+    width: 40px;
+}
+
+#burgermenu_streger span:after {
+    top: 12px;
+    width: 40px;
+}
+
+#burgermenu_streger.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 40px;
+}
+
+#burgermenu_streger.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 40px;
+}
+
+#burgermenu_streger.close span:after {
+    top: 0px;
+    left: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+    width: 0;
+}
+
+#burgermenu {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+#burgermenu.overlay {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 5rem;
+    background: var(--hvid);
+}
+
+#burgermenu li {
+    list-style: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#burgermenu a {
+    color: var(--sort);
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+#burgermenu ul {
+    padding-inline-start: 0px;
+}
+
+.burger_sprog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid var(--gra);
+    padding-top: 10px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.burger_sprog_p {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.underline_hover:hover {
+    cursor: pointer;
+}
+
+
+/* Underline animation hover https://codepen.io/toianw/pen/YqEqrz */
+
+li>a::after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0;
+    top: 5px;
+    background: transparent;
+    transition: all 0.3s;
+
+}
+
+li>a {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li>a:hover::after,
+li>a.active_menu::after {
+    width: 100%;
+    background: var(--sort);
+}
+
+
+/* Bruges i js til at deaktivere scroll, når burgermenuen er åben */
+.lock-scroll {
+    overflow: hidden;
+}
+
+#da_mobil {
+    text-decoration: underline;
+}
+
+
+/*----- COVERBILLEDE -----*/
+
+.cover_video {
+    border: none;
+    outline: none;
+}
+
+#cover_video_mobil {
+    width: 100%;
+}
+
+#cover_video_com {
+    display: none;
+}
+
+
+/*-------------------------------------------------------------------------
+FORSIDE PRODUKTER
+-------------------------------------------------------------------------*/
+
+.forside_section {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.button {
+    background-color: var(--hvid);
+    border: 2px solid var(--orange);
+    border-radius: 5px;
+    height: 2rem;
+    width: 98%;
+    margin-left: 6%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--sort);
+    text-decoration: none;
+    transition: 0.3s all ease-in-out;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#produkter_l_section {
+    display: none;
+}
+
+#produkter_s_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pro_s_section_div {
+    width: 90%;
+}
+
+.pro_section_img {
+    width: 100%;
+    padding-top: 7%;
+    padding-left: 6%;
+}
+
+.accent_txt {
+    font-family: 'Oooh Baby';
+    padding-right: 5%;
+    padding-bottom: 10%;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    text-align: right;
+    font-size: 2.5rem;
+}
+
+.pro_section_txt {
+    padding-left: 11%;
+    padding-top: 15%;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+#pro_s_div4,
+#pro_s_div5 {
+    padding-top: 5%;
+}
+
+
+/*-------------------------------------------------------------------------
+FORSIDE BUTIK VIDEO
+-------------------------------------------------------------------------*/
+
+#video {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.butik_section_button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 90%;
+}
+
+
+
+/*-------------------------------------------------------------------------
+FORSIDE OM RIKKE
+-------------------------------------------------------------------------*/
+
+#rikke_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.rikke_section_img {
+    width: 100%;
+}
+
+.rikke_section_button {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rikke_section_h {
+    margin-block-end: 0em;
+}
+
+
+
+/*-------------------------------------------------------------------------
+FORSIDE INSTAGRAM
+-------------------------------------------------------------------------*/
+
+.instagram_section_h {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#instagram_section {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 100px;
+}
+
+.slider-container {
+    position: relative;
+    overflow-x: hidden;
+    height: 370px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.slider-width {
+    position: absolute;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    left: 0;
+    top: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 350px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.insta_img {
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+
+.insta_link {
+    text-decoration: none;
+    color: var(--sort);
+
+}
+
+.prev,
+.next {
+    border: none;
+    background: var(--hvid);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    transform: translate(-50%);
+    position: absolute;
+}
+
+.prev {
+    left: 10%;
+}
+
+.next {
+    left: 90%;
+}
+
+#prev_ikon,
+#next_ikon {
+    font-size: 3rem;
+    color: var(--sort);
+}
+
+
+
+/*-------------------------------------------------------------------------
+PRODUKTKATALOG
+-------------------------------------------------------------------------*/
+
+.pro_div {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.pro_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.pro_hover {
+    display: none;
+}
+
+.produkt_div3,
+.produkt_div8 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#pro_div3,
+#pro_div4,
+#pro_div8,
+#pro_div9 {
+    width: 98%;
+}
+
+#pro_div4,
+#pro_div9 {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+
+/*-------------------------------------------------------------------------
+PRODUKTER
+-------------------------------------------------------------------------*/
+
+.krumme {
+    color: var(--sort);
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
+}
+
+#p_nav {
+    margin-bottom: 30px;
+}
+
+/* Billeder */
+.mySlides {
+    display: none
+}
+
+.slide_img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev_btn,
+.next_btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: var(--sort);
+    background-color: var(--hvid);
+    opacity: 0.25;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: 0.6s ease;
+    border-radius: 10px;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next_btn {
+    right: 5px;
+}
+
+.prev_btn {
+    left: 5px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    border: 1px solid var(--gra);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: var(--gra);
+}
+
+
+/* Infopunkter */
+
+.info_punkt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.info_ikon {
+    padding-right: 10px;
+}
+
+
+
+/* Infotekst */
+
+.p_button {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+/* Billeder i bunden */
+
+.p_bund_section {
+    text-align: center;
+}
+
+.p_pc_img {
+    display: none;
+}
+
+.p_mobil_img {
+    width: 100%;
+}
+
+
+
+/*-------------------------------------------------------------------------
+BAG OM GLASSET
+-------------------------------------------------------------------------*/
+
+.om_section {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.om_img {
+    width: 100%;
+}
+
+.om_section_button {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.om_h {
+    margin-block-end: 0.4em;
+}
+
+.om_p {
+    margin-block-start: 0em;
+}
+
+.om_video_section {
+    text-align: center;
+}
+
+.om_video {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*-------------------------------------------------------------------------
+ANDRE GLASPROJEKTER
+-------------------------------------------------------------------------*/
+
+.andre_pc_img {
+    display: none;
+}
+
+#andre_glas_section {
+    display: flex;
+    flex-direction: column;
+}
+
+.andre_glas_div {
+    margin-bottom: 30px;
+}
+
+.andre_mobil_img {
+    width: 100%;
+}
+
+
+/*-------------------------------------------------------------------------
+KONTAKT
+-------------------------------------------------------------------------*/
+
+/* Section 1 */
+
+.panorama_img {
+    border: none;
+    width: 100%;
+    height: 400px;
+}
+
+.kontakt_section1 {
+    text-align: center;
+}
+
+.kontakt_button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+
+
+/* Section 2 */
+
+.kontakt_section2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt_tider_liste {
+    list-style-type: none;
+}
+
+.kontakt_tider_liste li,
+.kontakt_parkering_liste li {
+    margin: 5px 10px;
+}
+
+
+/* Section 3 */
+
+.kontakt_img {
+    width: 100%;
+}
+
+
+/*-------------------------------------------------------------------------
+FOOTER
+-------------------------------------------------------------------------*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid var(--gra);
+    margin-bottom: 50px;
+    padding-top: 20px;
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.footer_txt {
+    line-height: 1.5;
+}
+
+.footer_link {
+    color: var(--sort);
+    text-decoration: none;
+}
+
+.fa-brands {
+    color: var(--sort);
+    font-size: 2.5rem;
+}
+
+.fa-instagram {
+    margin-right: 20px;
+}
+
+.footer_card_header {
+    margin-block-end: 0.4em;
+}
+
+.footer_middle_txt {
+    margin-block-start: 0em;
+}
+
+#footer_card_last_header {
+    margin-top: 50px;
+}
+
+address {
+    font-style: normal;
+}
+
+.footer_bund {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.bund_bull {
+    display: none;
+}
+
+
+/*-------------------------------------------------------------------------
+404 FEJLSIDE
+-------------------------------------------------------------------------*/
+
+.fejl_section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.fejl_header {
+    font-size: 2.5rem;
+}
+
+.fejl_img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.fejl_txt {
+    margin-bottom: 40px;
+}
+
+.fejl_button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/*=============================================================================================
+===================================   STOR MOBIL & TABLET   ===================================
+=============================================================================================*/
+
+@media screen and (min-width: 500px) {
+
+    /*-------------------------------------------------------------------------
+    FORSIDE PRODUKTER
+    -------------------------------------------------------------------------*/
+    .accent_txt {
+        font-size: 3.5rem;
+    }
+
+    .pro_section_txt {
+        font-size: 1.3rem;
+    }
+
+
+    #pro_s_div4,
+    #pro_s_div5 {
+        padding-top: 10%;
+    }
+
+}
+
+
+@media screen and (min-width: 700px) {
+
+    /*-------------------------------------------------------------------------
+    FORSIDE PRODUKTER
+    -------------------------------------------------------------------------*/
+    .forside_section {
+        margin-bottom: 60px;
+    }
+
+    .accent_txt {
+        font-size: 6.2rem;
+    }
+
+    .pro_section_txt {
+        font-size: 2rem;
+    }
+
+    .button {
+        font-size: 1.2rem;
+        height: 2.5rem;
+    }
+
+
+    /*-------------------------------------------------------------------------
+    FORSIDE BUTIK
+    -------------------------------------------------------------------------*/
+
+    .butik_section_button {
+        width: 50%;
+    }
+
+
+    /*-------------------------------------------------------------------------
+    FORSIDE OM RIKKE
+    -------------------------------------------------------------------------*/
+
+    .rikke_section_button {
+        width: 50%;
+    }
+
+    .rikke_section_p {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .rikke_section_h {
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+    }
+
+
+    /*-------------------------------------------------------------------------
+    PRODUKTER
+    -------------------------------------------------------------------------*/
+
+    .p_info {
+        width: 100%;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .p_button {
+        width: 70%;
+    }
+
+
+    /*-------------------------------------------------------------------------
+    BAG OM GLASSET
+    -------------------------------------------------------------------------*/
+
+    .om_video {
+        height: 500px;
+    }
+
+
+}
+
+
+
+
+/*=============================================================================================
+=======================================   TABLET & PC   =======================================
+=============================================================================================*/
+
+@media screen and (min-width: 800px) {
+
+
+    /* Forside om Rikke */
+    .forside_section {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .rikke_section_p {
+        text-align: left;
+    }
+
+    /* Produkt */
+    .krumme {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* Footer bund */
+    .footer_bund {
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .bund_bull {
+        display: inline-block;
+        padding: 0 20px;
+    }
+
+    /* 404 fejlside */
+
+    .fejl_button {
+        width: 60%;
+    }
+
+}
+
+
+@media screen and (min-width: 1180px) {
+
+    body {
+        font-size: 1.2rem;
+    }
+
+    /*-------------------------------------------------------------------------
+    HEADER
+    -------------------------------------------------------------------------*/
+
+    #burgermenu_streger,
+    #burgermenu {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        padding-inline-start: 0px;
+    }
+
+    /*----- SPROG -----*/
+
+    .skift_sprog {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        font-size: 1rem;
+        margin-top: 10px;
+        margin-right: 30px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .sprog_p {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-right: 5px;
+        padding-top: 2px;
+        cursor: pointer;
+    }
+
+    #sprog_ikon {
+        font-size: 1.3rem;
+        padding-right: 5px;
+    }
+
+    #da_pc {
+        text-decoration: underline;
+    }
+
+    .underline_hover:hover {
+        text-decoration: underline;
+    }
+
+
+    /*----- LOGO -----*/
+
+    .logo_link {
+        margin-left: 30px;
+        margin-top: 10px;
+        width: 15%;
+    }
+
+    .logo {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /*----- MENUBAR -----*/
+
+    .menupunkt {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.4rem;
+        color: var(--sort);
+        text-decoration: none;
+        margin-left: 40px;
+    }
+
+
+    .menubar {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        margin-right: 60px;
+    }
+
+    .menu_og_sprog {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+    /* Underline animation hover https://codepen.io/toianw/pen/YqEqrz */
+
+    li {
+        list-style-type: none;
+        display: inline-block;
+        margin: 5px 10px;
+    }
+
+    li>a {
+        color: var(--sort);
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+    }
+
+    #cover_video_mobil {
+        display: none;
+    }
+
+    #cover_video_com {
+        display: block;
+        width: 100%;
+    }
+
+
+
+    /*-------------------------------------------------------------------------
+    FORSIDE PRODUKTER
+    -------------------------------------------------------------------------*/
+
+    .forside_section {
+        margin-left: 12%;
+        margin-right: 12%;
+        margin-bottom: 75px;
+    }
+
+    .button {
+        font-size: 1.2rem;
+        height: 3rem;
+    }
+
+    .button:hover {
+        background-color: var(--orange);
+        color: var(--hvid);
+    }
+
+    #produkter_s_section {
+        display: none;
+    }
+
+    .accent_txt {
+        font-family: 'Oooh Baby';
+        font-size: 5rem;
+        text-align: right;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        padding-right: 10%;
+        padding-left: 10%;
+        padding-bottom: 5%;
+    }
+
+    .pro_section_txt {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        font-size: 1.6rem;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 25%;
+    }
+
+    .pro_section_button {
+        width: 80%;
+        margin-bottom: 15%;
+        margin-left: 14%;
+    }
+
+    #produkter_l_section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .pro_l_section_div {
+        position: relative;
+        width: 90%;
+        margin-top: 5%;
+    }
+
+    .pro_section_img {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding-top: 0;
+    }
+
+    .pro_section_img_hover {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 6%;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    .pro_l_section_div:hover .pro_section_img_hover {
+        opacity: 0.85;
+    }
+
+    #pro_section_img_hover1 {
+        background-color: rgb(185, 160, 142);
+        cursor: pointer;
+    }
+
+    #pro_section_img_hover2 {
+        background-color: rgb(210, 173, 192);
+        cursor: pointer;
+    }
+
+    #pro_section_img_hover4 {
+        background-color: rgb(210, 207, 162);
+        cursor: pointer;
+    }
+
+    #pro_section_img_hover6 {
+        background-color: rgb(133, 183, 133);
+        cursor: pointer;
+    }
+
+    .pro_section_img_txt {
+        color: var(--sort);
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2rem;
+    }
+
+
+    /*-------------------------------------------------------------------------
+    FORSIDE BUTIK VIDEO
+    -------------------------------------------------------------------------*/
+
+    #video {
+        width: 75%;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.7);
+    }
+
+    .butik_section_button {
+        width: 25%;
+        margin-top: 30px;
+    }
+
+
+    /*-------------------------------------------------------------------------
+    FORSIDE OM RIKKE
+    -------------------------------------------------------------------------*/
+
+    #rikke_section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        align-items: center;
+    }
+
+    .rikke_section_div {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .rikke_section_img {
+        width: 50%;
+    }
+
+    .rikke_section_button {
+        width: 60%;
+        margin-top: 20px;
+    }
+
+
+    /*-------------------------------------------------------------------------
+    FORSIDE INSTAGRAM
+    -------------------------------------------------------------------------*/
+
+    .prev {
+        left: 45%;
+    }
+
+    .next {
+        left: 55%;
+    }
+
+    #prev_ikon:hover,
+    #next_ikon:hover {
+        color: var(--orange);
+    }
+
+
+
+    /*-------------------------------------------------------------------------
+    PRODUKTKATALOG
+    -------------------------------------------------------------------------*/
+
+    .pro_div {
+        width: 97%;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .pro_img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .produkt_div1,
+    .produkt_div4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pro_hover {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    .pro_div:hover .pro_hover {
+        opacity: 0.85;
+    }
+
+    #pro_hover1 {
+        background-color: rgb(142, 170, 140);
+        cursor: pointer;
+    }
+
+    #pro_hover2 {
+        background-color: rgb(244, 167, 103);
+        cursor: pointer;
+    }
+
+    #pro_hover3 {
+        background-color: rgb(237, 224, 158);
+        cursor: pointer;
+    }
+
+    #pro_hover4 {
+        background-color: rgb(188, 149, 108);
+        cursor: pointer;
+    }
+
+    #pro_hover5 {
+        background-color: rgb(182, 224, 219);
+        cursor: pointer;
+    }
+
+    #pro_hover6 {
+        background-color: rgb(218, 185, 201);
+        cursor: pointer;
+    }
+
+    #pro_hover7 {
+        background-color: rgb(174, 164, 131);
+        cursor: pointer;
+    }
+
+    #pro_hover8 {
+        background-color: rgb(158, 142, 180);
+        cursor: pointer;
+    }
+
+    #pro_hover9 {
+        background-color: rgb(173, 173, 173);
+        cursor: pointer;
+    }
+
+    .pro_txt {
+        color: var(--sort);
+        font-size: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+
+    
+    /*-------------------------------------------------------------------------
+    PRODUKTER
+    -------------------------------------------------------------------------*/
+
+    .krumme {
+        margin-left: 12%;
+        margin-right: 12%;
+        font-size: 1.1rem;
+    }
+
+    .krumme:hover {
+        color: var(--orange);
+    }
+
+    .p_info_txt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 48%;
+    }
+
+    .info_section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .pro_img_div {
+        width: 48%;
+    }
+
+    /* Billeder */
+
+    /* On hover, add a black background color with a little bit seethrough */
+    .prev_btn:hover,
+    .next_btn:hover {
+        background-color: var(--gra);
+        opacity: 0.5;
+    }
+
+
+    /* Tekst */
+    .p_button {
+        width: 50%;
+    }
+
+    /* Billeder i bunden */
+    .info_section {
+        margin-bottom: 0px;
+    }
+
+    .p_mobil_img {
+        display: none;
+    }
+    
+    .p_pc_img {
+        display: block;
+        width: 100%;
+    }
+
+
+
+
+
+
+    /*-------------------------------------------------------------------------
+    BAG OM GLASSET
+    -------------------------------------------------------------------------*/
+
+    .om_section {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .om_div {
+        width: 45%;
+    }
+
+    .om_section_button {
+        width: 50%;
+    }
+
+    .om_img {
+        width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /*-------------------------------------------------------------------------
+    ANDRE GLASPROJEKTER
+    -------------------------------------------------------------------------*/
+
+    .andre_pc_img {
+        display: block;
+        width: 100%;
+    }
+
+    .andre_glas_div {
+        margin-bottom: 60px;
+    }
+
+    .andre_mobil_img {
+        display: none;
+    }
+
+
+    /*-------------------------------------------------------------------------
+    KONTAKT
+    -------------------------------------------------------------------------*/
+
+    /* Section 1 */
+
+    .kontakt_section1 {
+        text-align: center;
+    }
+
+    .kontakt_button {
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
+    }
+
+
+    /* Section 2 */
+
+    .kontakt_section2 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /*
+    .kontakt_tider_liste {
+        padding-inline-start: 30px;
+    }
+
+    .kontakt_parkering_liste {
+        list-style-type: disc;
+        padding-inline-start: 30px;
+    }
+    */
+
+    .kontakt_h2 {
+        margin: 5px 10px;
+    }
+
+    .kontakt_section2_div {
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+
+    /* Section 3 */
+
+    .kontakt_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+
+
+
+    /*-------------------------------------------------------------------------
+    FOOTER
+    -------------------------------------------------------------------------*/
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+
+    .footer_card {
+        width: 25%;
+    }
+
+    .orange_hover:hover {
+        color: var(--orange);
+    }
+
+    /*-------------------------------------------------------------------------
+    404 FEJLSIDE
+    -------------------------------------------------------------------------*/
+
+    .fejl_button {
+        width: 40%;
+    }
+
+    .fejl_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+}
+
+
+
+
+
+/*=============================================================================================
+=========================================   STOR PC   =========================================
+=============================================================================================*/
+
+@media screen and (min-width: 1800px) {
+
+    body {
+        max-width: 1800px;
+    }
+
+    .accent_txt {
+        font-size: 7rem;
+    }
+
+    .pro_section_txt {
+        font-size: 2rem;
+        padding-top: 20%;
+    }
+
+}
