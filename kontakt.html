@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stenholt Glas er en hjemmeside, som præsenterer brugskunst i glas lavet af glaspusteren Rikke Stenholt.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Kontakt | Stenholt Glas</title>
+
+    <!-- Link til Googleikoner -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Link til fontawesome ikoner -->
+    <script src="https://kit.fontawesome.com/6caf760fb1.js" crossorigin="anonymous"></script>
+
+    <!-- Link til Googlefonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
+    <!-- Panorama billede -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.4.2/aframe.min.js"></script>
+
+</head>
+
+<body id="body">
+
+    <!--------------------------------------------------------------------------------------
+    ---------------------------------------- HEADER ----------------------------------------
+    --------------------------------------------------------------------------------------->
+    <header>
+
+        <!--------------------------------------------------------------------------
+         NAVIGATION 
+        --------------------------------------------------------------------------->
+        <nav>
+
+            <!-- Logo -->
+            <a href="index.html" class="logo_link"><img src="img/logo.png" alt="Stenholt Glas logo" class="logo"></a>
+
+
+            <!-- Burgermenu streger https://codepen.io/AlHakem/pen/pKoEYp -->
+            <div id="burgermenu_streger">
+                <span></span>
+            </div>
+
+            <!-- Menubar og sprog -->
+            <div class="menu_og_sprog">
+                <!-- Sprog -->
+                <div class="skift_sprog">
+                    <i class="material-icons" id="sprog_ikon">language</i>
+                    <p class="sprog_p underline_hover" id="da_pc">DA</p>
+                    <p class="sprog_p">/</p>
+                    <p class="sprog_p underline_hover" id="en_pc">EN</p>
+                </div>
+
+                <!-- Menubar -->
+                <div class="menubar">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="menupunkt">
+                                Forside
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="produktkatalog.html" class="menupunkt">
+                                Produktkatalog
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="bag_om_glasset.html" class="menupunkt">
+                                Bag om glasset
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="andre_glasprojekter.html" class="menupunkt">
+                                Andre glasprojekter
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="kontakt.html" class="menupunkt active_menu">
+                                Kontakt
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Burgermenu indhold -->
+        <div id="burgermenu">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Forside
+                    </a>
+                </li>
+
+                <li>
+                    <a href="produktkatalog.html">
+                        Produktkatalog
+                    </a>
+                </li>
+
+                <li>
+                    <a href="bag_om_glasset.html">
+                        Bag om glasset
+                    </a>
+                </li>
+
+                <li>
+                    <a href="andre_glasprojekter.html">
+                        Andre glasprojekter
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kontakt.html" class="active_menu">
+                        Kontakt
+                    </a>
+                </li>
+
+                <!-- Sprog -->
+                <li>
+                    <div class="burger_sprog">
+                        <i class="material-icons" id="burger_sprog_ikon">language</i>
+                        <p class="burger_sprog_p underline_hover" id="da_mobil">DA</p>
+                        <p class="burger_sprog_p">/</p>
+                        <p class="burger_sprog_p underline_hover" id="en_mobil">EN</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+
+
+    <!--------------------------------------------------------------------------------------
+    --------------------------------------- SECTIONS ---------------------------------------
+    --------------------------------------------------------------------------------------->
+
+    <!-- 360 billede og tekst -->
+    <section class="forside_section kontakt_section1">
+
+        <h1 class="kontakt_h">Tag et kig indenfor i butikken!</h1>
+
+        <div class="img-box">
+            <iframe
+                src="https://momento360.com/e/u/2e79dd6faf6042e185240219e1fbd69e?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium&display-plan=true"
+                class="panorama_img"></iframe>
+        </div>
+
+        <p class="kontakt_p">
+            Hvis du har spørgsmål, er du altid velkommen til at kontakte Rikke på 46 76 19 76, skrive en mail til
+            stenholtglas@stenholtglas.dk, eller komme et smut forbi butikken på Skt. Pauls Kirkeplads 6, 8000 Aarhus
+            C.
+        </p>
+
+        <a href="https://www.google.dk/maps/place/Stenholt+Glas/@56.1470948,10.2034438,17z/data=!4m15!1m8!3m7!1s0x464c3f8952d2634f:0x2e8028b077bd5b16!2sSankt+Pauls+Kirkeplads+6,+8000+Aarhus!3b1!8m2!3d56.1460082!4d10.20345!16s%2Fg%2F11c25k0r_3!3m5!1s0x464c3f8eacd6432f:0xe528ab7436582e7c!8m2!3d56.1460082!4d10.20345!16s%2Fg%2F1vc80dst"
+            target="_blank" class="button_link button kontakt_button">Find vej til butikken</a>
+
+    </section>
+
+
+    <!-- Åbningstider og p-muligheder-->
+    <section class="forside_section kontakt_section2">
+
+        <div class="kontakt_section2_div">
+            <h1 class="kontakt_h kontakt_h2">Åbningstider</h1>
+
+            <ul class="kontakt_tider_liste">
+                <li>Mandag: Lukket</li>
+                <li>Tirsdag: 10-17:30</li>
+                <li>Onsdag: 10-17:30</li>
+                <li>Torsdag: 10-17:30</li>
+                <li>Fredag: 10-17:30</li>
+                <li>Lørdag: 10-13</li>
+                <li>Søndag: Lukket</li>
+            </ul>
+        </div>
+
+        <div class="kontakt_section2_div">
+            <h1 class="kontakt_h kontakt_h2">Parkeringsmuligheder</h1>
+
+            <ul class="kontakt_parkering_liste">
+                <li>På Skt. Pauls Kirkeplads kan du parkere gratis i 15 min.<br><br></li>
+                <li>Du kan parkere i gaderne omkring Skt. Pauls Kirkeplads - vær dog opmærksom på at det er
+                    betalingsparkering.<br><br></li>
+                <li>Bruuns Galleri har p-hus kun 5 minutters gang fra butikken.<br><br></li>
+                <li>Buslinjerne 13, 16, 17, 18 og 100 stopper lige foran butikken.</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Billede i bunden -->
+    <section class="forside_section kontakt_section3">
+
+        <img src="img/kontakt.png"
+            alt="Fem farverige glasprodukter i et udstillingsvidue. En vase, en skål, en kaffekop, et glas og en kande. I baggrunden er der sol, blå himmel, Skt. Pauls Kirke i Aarhus og et skilt hvor der står glaspuster."
+            class="kontakt_img">
+
+    </section>
+
+
+
+
+    <!--------------------------------------------------------------------------------------
+    ---------------------------------------- FOOTER ----------------------------------------
+    --------------------------------------------------------------------------------------->
+    <footer>
+
+        <!-- Card 1: Kontakt -->
+        <div class="footer_card">
+
+            <h2 class="footer_card_header">Kontakt</h2>
+
+            <address class="footer_txt">
+                Skt. Pauls Kirkeplads 6<br>
+                8000 Aarhus C<br>
+                Danmark
+            </address>
+
+            <p class="footer_txt">Tel.: <a href="tel:+4586761976" class="footer_link orange_hover" id="tel">(+45) 86
+                    76 19 76</a>
+            </p>
+
+            <p class="footer_txt">E-mail: <a href="mailto:stenholtglas@stenholtglas.dk"
+                    class="footer_link orange_hover">stenholtglas@stenholtglas.dk</a></p>
+
+        </div>
+
+        <!-- Card 2: Åbningstider -->
+        <div class="footer_card">
+
+            <h2 class="footer_card_header">Åbningstider</h2>
+
+            <p class="footer_txt footer_middle_txt">
+                Mandag: Lukket <br>
+                Tirsdag: 10-17:30 <br>
+                Onsdag: 10-17:30 <br>
+                Torsdag: 10-17:30 <br>
+                Fredag: 10-17:30 <br>
+                Lørdag: 10-13 <br>
+                Søndag: Lukket <br>
+            </p>
+        </div>
+
+        <!-- Card 3: Følg med & suppleringsgaranti -->
+        <div class="footer_card">
+
+            <h2 class="footer_card_header">Følg med</h2>
+
+            <div>
+                <a href="https://www.instagram.com/stenholtglas/" class="some_link"><i
+                        class="fa-brands fa-instagram orange_hover"></i></a>
+                <a href="https://www.facebook.com/Stenholt.Glas.Rikke" class="some_link"><i
+                        class="fa-brands fa-square-facebook orange_hover"></i></a>
+            </div>
+
+            <h2 class="footer_card_header" id="footer_card_last_header">Har du ødelagt en udgået vare?</h2>
+
+            <p class="footer_txt footer_middle_txt">Rikke har suppleringsgaranti og tilbyder at
+                rekreere den for dig. </p>
+        </div>
+
+    </footer>
+
+    <div class="footer_bund">
+
+        <p class="bund_txt bund_vat">VAT: DK25341759</p>
+
+        <p class="bund_txt bund_bull">&bull;</p>
+
+        <p class="bund_txt bund_copy" id="bund_copy"></p>
+
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="js/menu.js"></script>
+    <script src="js/year.js"></script>
+    <script src="js/sprog.js"></script>
+
+</body>
+
+</html>

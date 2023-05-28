@@ -1,0 +1,373 @@
+<!-- https://codepen.io/traceypooh/pen/eGvpOP -->
+
+
+
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stenholt Glas er en hjemmeside, som præsenterer brugskunst i glas lavet af glaspusteren Rikke Stenholt.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Produktkatalog | Stenholt Glas</title>
+
+    <!-- Link til Googleikoner -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Link til fontawesome ikoner -->
+    <script src="https://kit.fontawesome.com/6caf760fb1.js" crossorigin="anonymous"></script>
+
+    <!-- Link til Googlefonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
+</head>
+
+<body id="body">
+
+    <!--------------------------------------------------------------------------------------
+    ---------------------------------------- HEADER ----------------------------------------
+    --------------------------------------------------------------------------------------->
+    <header>
+
+        <!--------------------------------------------------------------------------
+         NAVIGATION 
+        --------------------------------------------------------------------------->
+        <nav>
+
+            <!-- Logo -->
+            <a href="index.html" class="logo_link"><img src="img/logo.png" alt="Stenholt Glas logo" class="logo"></a>
+
+
+            <!-- Burgermenu streger https://codepen.io/AlHakem/pen/pKoEYp -->
+            <div id="burgermenu_streger">
+                <span></span>
+            </div>
+
+            <!-- Menubar og sprog -->
+            <div class="menu_og_sprog">
+                <!-- Sprog -->
+                <div class="skift_sprog">
+                    <i class="material-icons" id="sprog_ikon">language</i>
+                    <p class="sprog_p underline_hover" id="da_pc">DA</p>
+                    <p class="sprog_p">/</p>
+                    <p class="sprog_p underline_hover" id="en_pc">EN</p>
+                </div>
+
+                <!-- Menubar -->
+                <div class="menubar">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="menupunkt">
+                                Forside
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="produktkatalog.html" class="menupunkt active_menu">
+                                Produktkatalog
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="bag_om_glasset.html" class="menupunkt">
+                                Bag om glasset
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="andre_glasprojekter.html" class="menupunkt">
+                                Andre glasprojekter
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="kontakt.html" class="menupunkt">
+                                Kontakt
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Burgermenu indhold -->
+        <div id="burgermenu">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Forside
+                    </a>
+                </li>
+
+                <li>
+                    <a href="produktkatalog.html" class="active_menu">
+                        Produktkatalog
+                    </a>
+                </li>
+
+                <li>
+                    <a href="bag_om_glasset.html">
+                        Bag om glasset
+                    </a>
+                </li>
+
+                <li>
+                    <a href="andre_glasprojekter.html">
+                        Andre glasprojekter
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kontakt.html">
+                        Kontakt
+                    </a>
+                </li>
+
+                <!-- Sprog -->
+                <li>
+                    <div class="burger_sprog">
+                        <i class="material-icons" id="burger_sprog_ikon">language</i>
+                        <p class="burger_sprog_p underline_hover" id="da_mobil">DA</p>
+                        <p class="burger_sprog_p">/</p>
+                        <p class="burger_sprog_p underline_hover" id="en_mobil">EN</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+
+
+    <!--------------------------------------------------------------------------------------
+    --------------------------------------- SECTIONS ---------------------------------------
+    --------------------------------------------------------------------------------------->
+
+
+    <section class="forside_section pro_section">
+
+        <div class="produkt_div produkt_div1">
+
+            <!-- Billede 1 -->
+            <div class="pro_div" id="pro_div1">
+                <a href="404.html">
+                    <img src="img/pro1.png" alt="Fire gennemsigtige glas på række i forskellige farver med baggrund af et hvidt gardin." class="pro_img">
+
+                    <div class="pro_hover" id="pro_hover1">
+                        <div class="pro_txt">Klemmeglas<br><br>Klemmekande<br><br>Flødekande</div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="produkt_div produkt_div2">
+
+                <!-- Billede 2 -->
+                <div class="pro_div" id="pro_div2">
+                    <a href="p_danse.html">
+                        <img src="img/pro2.png" alt="Hvidt glasfad med en bunke aprikoser på sennepsgult stof." class="pro_img">
+
+
+                        <div class="pro_hover" id="pro_hover2">
+                            <div class="pro_txt">Danseglas<br><br>Dansefad</div>
+                        </div>
+                    </a>
+                </div>
+
+
+
+                <div class="produkt_div produkt_div3">
+
+                    <!-- Billede 3 -->
+                    <div class="pro_div" id="pro_div3">
+                        <a href="404.html">
+                            <img src="img/pro3.png" alt="To lysegule glassaltkar. Ét bruges som æggebæger, det andet har salt i sig." class="pro_img pro_img3">
+
+                            <div class="pro_hover" id="pro_hover3">
+                                <div class="pro_txt">Saltkar</div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <!-- Billede 4 -->
+                    <div class="pro_div" id="pro_div4">
+                        <a href="404.html">
+                            <img src="img/pro4.png" alt="Gennemsigtige glasengle med vinger." class="pro_img">
+
+                            <div class="pro_hover" id="pro_hover4">
+                                <div class="pro_txt">Nisser<br><br>Engle<br><br>Adventskrans</div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="produkt_div produkt_div4">
+
+            <div class="produkt_div produkt_div5">
+
+                <!-- Billede 5 -->
+                <div class="pro_div" id="pro_div5">
+                    <a href="404.html">
+                        <img src="img/pro5.png" alt="Små runde glasvaser med ru overflade i lilla, lyseblå, lyserød og lysegrøn." class="pro_img">
+
+                        <div class="pro_hover" id="pro_hover5">
+                            <div class="pro_txt">Høj pulvervase<br><br>Rund pulvervase<br><br>Lille
+                                pulvervase<br><br>Olielampe</div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- Billede 6 -->
+                <div class="pro_div" id="pro_div6">
+                    <a href="404.html">
+                        <img src="img/pro6.png" alt="Champagneskål på krøllet fod med lyserøde blomster i." class="pro_img">
+
+                        <div class="pro_hover" id="pro_hover6">
+                            <div class="pro_txt">Champagneskål</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="produkt_div produkt_div6">
+
+                <!-- Billede 7 -->
+                <div class="pro_div" id="pro_div7">
+                    <a href="404.html">
+                        <img src="img/pro7.png" alt="En stor guldfarvede glasvase til venstre og en mindre til højre." class="pro_img">
+                        <div class="pro_hover" id="pro_hover7">
+                            <div class="pro_txt">Stor sølvvase<br><br>Mellem sølvvase<br><br>Lille
+                                sølvvase<br><br>Sølvskål
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="produkt_div produkt_div8">
+
+                    <!-- Billede 8 -->
+                    <div class="pro_div" id="pro_div8">
+                        <a href="404.html">
+                            <img src="img/pro8.png" alt="Gennemsigtig krøllet glasvase med tre stilke lavendelblomster." class="pro_img">
+
+                            <div class="pro_hover" id="pro_hover8">
+                                <div class="pro_txt">Krøllevase</div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <!-- Billede 9 -->
+                    <div class="pro_div" id="pro_div9">
+                        <a href="404.html">
+                            <img src="img/pro9.png" alt="Tre vinglas på snoet fod." class="pro_img">
+
+                            <div class="pro_hover" id="pro_hover9">
+                                <div class="pro_txt">Glas på snoet fod<br><br>Vinglas på snoet fod</div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--------------------------------------------------------------------------------------
+    ---------------------------------------- FOOTER ----------------------------------------
+    --------------------------------------------------------------------------------------->
+    <footer>
+
+        <!-- Card 1: Kontakt -->
+        <div class="footer_card">
+
+            <h2 class="footer_card_header">Kontakt</h2>
+
+            <address class="footer_txt">
+                Skt. Pauls Kirkeplads 6<br>
+                8000 Aarhus C<br>
+                Danmark
+            </address>
+
+            <p class="footer_txt">Tel.: <a href="tel:+4586761976" class="footer_link orange_hover" id="tel">(+45) 86
+                    76 19 76</a>
+            </p>
+
+            <p class="footer_txt">E-mail: <a href="mailto:stenholtglas@stenholtglas.dk"
+                    class="footer_link orange_hover">stenholtglas@stenholtglas.dk</a></p>
+
+        </div>
+
+        <!-- Card 2: Åbningstider -->
+        <div class="footer_card">
+
+            <h2 class="footer_card_header">Åbningstider</h2>
+
+            <p class="footer_txt footer_middle_txt">
+                Mandag: Lukket <br>
+                Tirsdag: 10-17:30 <br>
+                Onsdag: 10-17:30 <br>
+                Torsdag: 10-17:30 <br>
+                Fredag: 10-17:30 <br>
+                Lørdag: 10-13 <br>
+                Søndag: Lukket <br>
+            </p>
+        </div>
+
+        <!-- Card 3: Følg med & suppleringsgaranti -->
+        <div class="footer_card">
+
+            <h2 class="footer_card_header">Følg med</h2>
+
+            <div>
+                <a href="https://www.instagram.com/stenholtglas/" class="some_link"><i
+                        class="fa-brands fa-instagram orange_hover"></i></a>
+                <a href="https://www.facebook.com/Stenholt.Glas.Rikke" class="some_link"><i
+                        class="fa-brands fa-square-facebook orange_hover"></i></a>
+            </div>
+
+            <h2 class="footer_card_header" id="footer_card_last_header">Har du ødelagt en udgået vare?</h2>
+
+            <p class="footer_txt footer_middle_txt">Rikke har suppleringsgaranti og tilbyder at
+                rekreere den for dig. </p>
+        </div>
+
+    </footer>
+
+    <div class="footer_bund">
+
+        <p class="bund_txt bund_vat">VAT: DK25341759</p>
+
+        <p class="bund_txt bund_bull">&bull;</p>
+
+        <p class="bund_txt bund_copy" id="bund_copy"></p>
+
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="js/menu.js"></script>
+    <script src="js/year.js"></script>
+    <script src="js/sprog.js"></script>
+
+</body>
+
+</html>
