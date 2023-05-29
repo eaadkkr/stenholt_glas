@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Stenholt Glas er en hjemmeside, som præsenterer brugskunst i glas lavet af glaspusteren Rikke Stenholt.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Produktkatalog | Stenholt Glas</title>
+
+    <!-- Link til Googleikoner -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Link til fontawesome ikoner -->
+    <script src="https://kit.fontawesome.com/6caf760fb1.js" crossorigin="anonymous"></script>
+
+    <!-- Link til Googlefonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
+</head>
+
+<body id="body">
+
+    <!--------------------------------------------------------------------------------------
+    ---------------------------------------- HEADER ----------------------------------------
+    --------------------------------------------------------------------------------------->
+    <header>
+
+        <!--------------------------------------------------------------------------
+         NAVIGATION 
+        --------------------------------------------------------------------------->
+        <nav id="p_nav">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo_link"><img src="img/logo.png" alt="Stenholt Glas logo" class="logo"></a>
+
+
+            <!-- Burgermenu streger https://codepen.io/AlHakem/pen/pKoEYp -->
+            <div id="burgermenu_streger">
+                <span></span>
+            </div>
+
+            <!-- Menubar og sprog -->
+            <div class="menu_og_sprog">
+                <!-- Sprog -->
+                <div class="skift_sprog">
+                    <i class="material-icons" id="sprog_ikon">language</i>
+                    <p class="sprog_p underline_hover" id="da_pc">DA</p>
+                    <p class="sprog_p">/</p>
+                    <p class="sprog_p underline_hover" id="en_pc">EN</p>
+                </div>
+
+                <!-- Menubar -->
+                <div class="menubar">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="menupunkt">
+                                Forside
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="produktkatalog.html" class="menupunkt active_menu">
+                                Produktkatalog
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="bag_om_glasset.html" class="menupunkt">
+                                Bag om glasset
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="andre_glasprojekter.html" class="menupunkt">
+                                Andre glasprojekter
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="kontakt.html" class="menupunkt">
+                                Kontakt
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Burgermenu indhold -->
+        <div id="burgermenu">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Forside
+                    </a>
+                </li>
+
+                <li>
+                    <a href="produktkatalog.html" class="active_menu">
+                        Produktkatalog
+                    </a>
+                </li>
+
+                <li>
+                    <a href="bag_om_glasset.html">
+                        Bag om glasset
+                    </a>
+                </li>
+
+                <li>
+                    <a href="andre_glasprojekter.html">
+                        Andre glasprojekter
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kontakt.html">
+                        Kontakt
+                    </a>
+                </li>
+
+                <!-- Sprog -->
+                <li>
+                    <div class="burger_sprog">
+                        <i class="material-icons" id="burger_sprog_ikon">language</i>
+                        <p class="burger_sprog_p underline_hover" id="da_mobil">DA</p>
+                        <p class="burger_sprog_p">/</p>
+                        <p class="burger_sprog_p underline_hover" id="en_mobil">EN</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+
+
+    <!--------------------------------------------------------------------------------------
+    --------------------------------------- SECTIONS ---------------------------------------
+    --------------------------------------------------------------------------------------->
+
+    <a href="produktkatalog.html" class="krumme">&#8617; Tilbage til produktkataloget</a>
+
+    <section class="forside_section info_section">
+
+        <!-- Billeder https://www.tutorialspoint.com/how-to-create-an-image-slider-using-html-css-and-javascript# -->
+
+
+        <div class="pro_img_div">
+
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="img/se1.png" alt="Gennemigtig orange glasfad med grå betonvæg i baggrunden."
+                        class="slide_img">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="img/se2.png" alt="Lysegrønt, lyserødt og lyseblåt glas." class="slide_img">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="img/se3.png" alt="Cremefarvet glasfad med grå betonbaggrund." class="slide_img">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="img/se4.png" alt="En masse farverige glas set oppefra." class="slide_img">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="img/se5.png" alt="Blå glas fad. Ét står for sig selv, tre er stablet." class="slide_img">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="img/se6.png" alt="Seks hvide glasfade set oppefra på trægulv." class="slide_img">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="img/se7.png" alt="Fire farverige glasprodukter står i sollyset." class="slide_img">
+                </div>
+
+                <a class="prev_btn" onclick="plusSlides(-1)">❮</a>
+                <a class="next_btn" onclick="plusSlides(1)">❯</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+            </div>
+
+        </div>
+
+
+
+        <div class="p_info_txt">
+
+            <!-- Information -->
+            <div class="p_info">
+
+                <div class="p_info_div p_info1">
+
+                    <h1 class="p_info_h">Danseglas</h1>
+
+                    <div class="pris info_punkt">
+                        <i class="material-icons info_ikon" id="pris1_ikon">sell</i>
+                        <p class="info_txt">Pris: 250 kr.</p>
+                    </div>
+
+                    <div class="str info_punkt">
+                        <i class="material-icons info_ikon" id="str1_ikon">straighten</i>
+                        <p class="info_txt">Mål: 11 x 9 cm</p>
+                    </div>
+
+                    <div class="farver info_punkt">
+                        <i class="material-icons info_ikon" id="farver1_ikon">palette</i>
+                        <p class="info_txt">Farve: Fås i alle farver</p>
+                    </div>
+
+                    <div class="opv info_punkt">
+                        <i class="material-icons info_ikon" id="opv1_ikon">water_drop</i>
+                        <p class="info_txt">Tåler opvasker: Ja</p>
+                    </div>
+
+                </div>
+
+
+                <div class="p_info_div p_info2">
+
+                    <h1 class="p_info_h">Dansefad</h1>
+
+                    <div class="pris info_punkt">
+                        <i class="material-icons info_ikon" id="pris2_ikon">sell</i>
+                        <p class="info_txt">Pris: Fra 375 kr.</p>
+                    </div>
+
+                    <div class="str info_punkt">
+                        <i class="material-icons info_ikon" id="str2_ikon">straighten</i>
+                        <p class="info_txt">Mål: Fra 15 x 15 cm</p>
+                    </div>
+
+                    <div class="farver info_punkt">
+                        <i class="material-icons info_ikon" id="farver2_ikon">palette</i>
+                        <p class="info_txt">Farve: Fås i alle farver</p>
+                    </div>
+
+
+                    <div class="opv info_punkt">
+                        <i class="material-icons info_ikon" id="opv2_ikon">water_drop</i>
+                        <p class="info_txt">Tåler opvasker: Ja</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Tekst -->
+            <p>
+                Danseprodukterne er glade og har en fest med sving i skørterne. De er mundblæst af Rikke i 1120 grader
+                flydende glas. Deres bløde, finurlige former har de fået ved at blive slynget rundt undervejs i
+                processen.
+                <br><br>
+                Alle Rikkes produkter er håndlavede og helt unikke. Farveintensitet og størrelse vil derfor variere.
+                <br><br>
+                Rikke graverer gerne i produkterne, men vær opmærksom på at dette fratager fortrydelsesretten af købet.
+
+                <a href="kontakt.html" class="button_link button p_button">Besøg butikken</a>
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="forside_section p_bund_section">
+
+        <h1 class="">Se produkterne i brug</h1>
+
+        <img src="img/b1.png" alt="Farverige glasfade og drikkeglas i brug." class="p_pc_img">
+
+        <img src="img/b2.png" alt="Farverige glasfade og drikkeglas i brug." class="p_mobil_img">
+
+        <img src="img/b3.png" alt="Farverige glasfade og drikkeglas i brug." class="p_mobil_img">
+    </section>
+
+
+
+    <!--------------------------------------------------------------------------------------
+    ---------------------------------------- FOOTER ----------------------------------------
+    --------------------------------------------------------------------------------------->
+    <footer>
+
+        <!-- Card 1: Kontakt -->
+        <div class="footer_card">
+
+            <h2 class="footer_card_header">Kontakt</h2>
+
+            <a href="https://www.google.dk/maps/place/Stenholt+Glas/@56.1470948,10.2034438,17z/data=!4m15!1m8!3m7!1s0x464c3f8952d2634f:0x2e8028b077bd5b16!2sSankt+Pauls+Kirkeplads+6,+8000+Aarhus!3b1!8m2!3d56.1460082!4d10.20345!16s%2Fg%2F11c25k0r_3!3m5!1s0x464c3f8eacd6432f:0xe528ab7436582e7c!8m2!3d56.1460082!4d10.20345!16s%2Fg%2F1vc80dst"
+                target="_blank" class="footer_link orange_hover">
+                <address class="footer_txt">
+                    Skt. Pauls Kirkeplads 6<br>
+                    8000 Aarhus C<br>
+                    Danmark
+                </address>
+            </a>
+
+            <p class="footer_txt">Tel.: <a href="tel:+4586761976" class="footer_link orange_hover" id="tel">(+45) 86
+                    76 19 76</a>
+            </p>
+
+            <p class="footer_txt">E-mail: <a href="mailto:stenholtglas@stenholtglas.dk"
+                    class="footer_link orange_hover">stenholtglas@stenholtglas.dk</a></p>
+
+        </div>
+
+        <!-- Card 2: Åbningstider -->
+        <div class="footer_card">
+
+            <h2 class="footer_card_header">Åbningstider</h2>
+
+            <p class="footer_txt footer_middle_txt">
+                Mandag: Lukket <br>
+                Tirsdag: 10-17:30 <br>
+                Onsdag: 10-17:30 <br>
+                Torsdag: 10-17:30 <br>
+                Fredag: 10-17:30 <br>
+                Lørdag: 10-13 <br>
+                Søndag: Lukket <br>
+            </p>
+        </div>
+
+        <!-- Card 3: Følg med & suppleringsgaranti -->
+        <div class="footer_card">
+
+            <h2 class="footer_card_header">Følg med</h2>
+
+            <div>
+                <a href="https://www.instagram.com/stenholtglas/" class="some_link"><i
+                        class="fa-brands fa-instagram orange_hover"></i></a>
+                <a href="https://www.facebook.com/Stenholt.Glas.Rikke" class="some_link"><i
+                        class="fa-brands fa-square-facebook orange_hover"></i></a>
+            </div>
+
+            <h2 class="footer_card_header" id="footer_card_last_header">Har du ødelagt en udgået vare?</h2>
+
+            <p class="footer_txt footer_middle_txt">Rikke har suppleringsgaranti og tilbyder at
+                rekreere den for dig. </p>
+        </div>
+
+    </footer>
+
+    <div class="footer_bund">
+
+        <p class="bund_txt bund_vat">VAT: DK25341759</p>
+
+        <p class="bund_txt bund_bull">&bull;</p>
+
+        <p class="bund_txt bund_copy" id="bund_copy"></p>
+
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="js/menu.js"></script>
+    <script src="js/year.js"></script>
+    <script src="js/image_slide.js"></script>
+    <script src="js/sprog.js"></script>
+
+</body>
+
+</html>
